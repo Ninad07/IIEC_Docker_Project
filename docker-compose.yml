@@ -1,0 +1,32 @@
+version: '3'
+services:
+   db_os:
+      image: mysql:5.7
+      volumes: 
+             - sql_db_storage:/var/lib/mysql
+      restart: always
+      environment:
+              MYSQL_ROOT_PASSWORD: root_pass
+              MYSQL_USER: Ninad
+              MYSQL_PASSWORD: Redhat
+              MYSQL_DATABASE: jen_db
+
+
+   jenkins_os:
+      image: jenkins
+      restart: always
+      depends_on:
+              - db_os
+      ports:
+              - 8080:8080
+              - 50000:50000
+      
+      environment:
+              JENKINS_SLAVE_AGENT_PORT: 50001
+      
+      volumes:
+             - jen_os_storage:/var/jenkins_home
+
+volumes:
+        sql_db_storage:
+        jen_os_storage:
