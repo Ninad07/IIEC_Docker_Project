@@ -1,0 +1,21 @@
+Hello Learners
+
+I have created a docker compose file to manage the configuration, installation and running of Jenkins.
+Jenkins is a DevOps tool that is an open source automation server which enables developers around the world to reliably build, test, and deploy their software.
+It is a Web UI Application.
+It is always better to use a persistent storage while using Jenkins.
+So I have linked the Jenkins Image with MySQL Database Server to create a persistent storage.
+But before using Jenkins, we require to configure it. My project solves the problem of configuring and installing it manually.
+
+To use the YAML file:
+1] Pull Jenkins and MySQL images from Docker Hub
+2] Run the 'docker-compose up' command
+3] This process begins to configure Jenkins. After a few minutes, Jenkins gets configured and installed.
+4] After the installation, the process will prompt an authentication password for logging in to Jenkins.
+
+# Jenkins must be installed on the top of Linux OS (in my case RedHat 8) and the application must be run through a remote OS (in my case Windows)
+5] Enter the password and then you are good to go.
+
+Such kind of complex concepts were very easily explained to me by Vimal Daga Sir.
+I thank Vimal sir from the depth of my heart for lauching the IIEC_Rise campaign. IT is really proving very beneficial to students like me.
+Once again thank you very much Sir. We owe you a lot.
