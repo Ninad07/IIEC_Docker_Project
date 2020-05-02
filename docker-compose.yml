@@ -17,15 +17,19 @@ services:
       restart: always
       depends_on:
               - db_os
-      ports:
-              - 8080:8080
-              - 50000:50000
-      
       environment:
               JENKINS_SLAVE_AGENT_PORT: 50001
       
       volumes:
              - jen_os_storage:/var/jenkins_home
+
+   ngrok:
+      image: wernight/ngrok
+      depends_on:
+              - jenkins_os
+      command: ngrok http jenkins_os:8080
+      ports:
+           - '4040:4040'
 
 volumes:
         sql_db_storage:
