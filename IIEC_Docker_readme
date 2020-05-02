@@ -16,6 +16,15 @@ To use the YAML file:
 # Jenkins must be installed on the top of Linux OS (in my case RedHat 8) and the application must be run through a remote OS (in my case Windows)
 5] Enter the password and then you are good to go.
 
+****UPDATE:
+I have included the ngrok feature in the project.
+This feature allows the users to expose their Jenkins Web application to the public world, without buying the public IP.
+To use:
+1] Instead of using the 8080 port while launching Jenkins, use the port number 4040
+(As Ngrok works on port 8080)
+2] A URL is prompted. Copy the URL.
+2] The URL allows the users to access your Jenkins site publically.
+
 Such kind of complex concepts were very easily explained to me by Vimal Daga Sir.
 I thank Vimal sir from the depth of my heart for lauching the IIEC_Rise campaign. IT is really proving very beneficial to students like me.
 Once again thank you very much Sir. We owe you a lot.
